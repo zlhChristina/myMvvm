@@ -1,6 +1,7 @@
 package com.zlh.huahua.base.util
 
 import android.util.Log
+import com.zlh.huahua.base.contsant.AppConfig
 
 object LogUtil {
 
@@ -18,22 +19,32 @@ object LogUtil {
     }
 
     fun v(msg: String) {
-        Log.v(getTag(), msg)
+        if (AppConfig.isDebug) {
+            Log.v(getTag(), msg)
+        }
     }
 
     fun i(msg: String) {
-        Log.i(getTag(), msg)
+        if (AppConfig.isDebug) {
+            Log.i(getTag(), msg)
+        }
     }
 
     fun d(msg: String) {
-        Log.d(getTag(), msg)
+        if (AppConfig.isDebug) {
+            Log.d(getTag(), msg)
+        }
     }
 
     fun w(msg: String) {
-        Log.w(getTag(), msg)
+        if (AppConfig.isDebug) {
+            Log.w(getTag(), msg)
+        }
     }
 
     fun e(msg: String) {
-        Log.e(getTag(), msg)
+        if (AppConfig.isDebug) {
+            Log.e(getTag(), msg)
+        }
     }
 }
