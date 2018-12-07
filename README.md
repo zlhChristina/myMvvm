@@ -101,7 +101,7 @@ fun login() {
 
 > 我在里面也封装了一下辅助类，比如扩展函数，里面包括日常的吐司弹出，获取宽高还有view的显示隐藏等等，具体可以参考源码
 
-###### 5.1 RxBus（事件总线通信）
+##### 5.1 RxBus（事件总线通信）
 写法很简单，用法也很简单，主要是用于发送事件/订阅事件
 ```kotlin
 object RxBus {
@@ -126,7 +126,7 @@ object RxBus {
 ```kotlin
 RxBus.post(object)
 ```
-###### 5.2其他辅助工具类
+##### 5.2其他辅助工具类
 
 SPUtil： SharedPreferences工具类
 
