@@ -63,10 +63,10 @@ fun login() {
 
   val interceptor = HttpLoggingInterceptor()
   if(BuildConfig.DEBUG){
-  //显示日志
-  interceptor.level = HttpLoggingInterceptor.Level.BODY
+     //显示日志
+     interceptor.level = HttpLoggingInterceptor.Level.BODY
   else {
-  interceptor.level = HttpLoggingInterceptor.Level.NONE
+     interceptor.level = HttpLoggingInterceptor.Level.NONE
   }
   builder.addInterceptor(interceptor)
 
