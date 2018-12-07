@@ -18,7 +18,7 @@ dataBinding {
 ```
 #### 3.activity使用
     LoginActivity继承BaseActivity
- ```java
+ ```kotlin
  class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() 
     
     override fun bindContentLayout(): Int = R.layout.activity_login
@@ -38,25 +38,24 @@ BaseActivity是一个抽象类，里面bindContentLayout返回布局id，onActiv
 
 绑定用户名:
 在LoginViewModel中定义
-```java
+```kotlin
 val phone = ObservableField<String>("")
 ```
 在用户名EditText标签中绑定
-```java
+```kotlin
  android:text="@={loginVm.passWord}"
 ```
 点击事件绑定
-```java
+```kotlin
 fun login() {
 }
 ```
 在登录按钮标签中绑定
-
-```java
+```kotlin
  android:onClick="@{()->loginVm.login()}"
 ```
 #### 4.网络请求（retrofit+rxjava+okhttp）
-```java
+```kotlin
   val builder = OkHttpClient.Builder()
    builder.connectTimeout(DEFAULT_TIME_OUT, TimeUnit.SECONDS)
     builder.writeTimeout(DEFAULT_READ_TIME_OUT, TimeUnit.SECONDS)
