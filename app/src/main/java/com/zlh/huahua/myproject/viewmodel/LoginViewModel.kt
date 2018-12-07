@@ -1,11 +1,11 @@
 package com.zlh.huahua.myproject.viewmodel
 
-import com.zlh.huahua.base.http.BaseViewModel
 import android.databinding.ObservableField
 import android.text.TextUtils
-import cn.ejiamall.extension.showShortToast
+import com.zlh.huahua.base.extension.showShortToast
 import com.zlh.huahua.base.http.BaseSubscriber
 import com.zlh.huahua.base.http.BaseView
+import com.zlh.huahua.base.http.BaseViewModel
 import com.zlh.huahua.base.http.RetrofitManager
 import com.zlh.huahua.myproject.api.LoginApi
 import com.zlh.huahua.myproject.model.LoginModel
