@@ -57,24 +57,24 @@ fun login() {
 #### 4.网络请求（retrofit+rxjava+okhttp）
 ```kotlin
   val builder = OkHttpClient.Builder()
-   builder.connectTimeout(DEFAULT_TIME_OUT, TimeUnit.SECONDS)
-    builder.writeTimeout(DEFAULT_READ_TIME_OUT, TimeUnit.SECONDS)
-     builder.readTimeout(DEFAULT_READ_TIME_OUT, TimeUnit.SECONDS)
+  builder.connectTimeout(DEFAULT_TIME_OUT, TimeUnit.SECONDS)
+  builder.writeTimeout(DEFAULT_READ_TIME_OUT, TimeUnit.SECONDS)
+  builder.readTimeout(DEFAULT_READ_TIME_OUT, TimeUnit.SECONDS)
 
   val interceptor = HttpLoggingInterceptor()
-     if(BuildConfig.DEBUG){
-          //显示日志
-         interceptor.level = HttpLoggingInterceptor.Level.BODY
-       }else {
-          interceptor.level = HttpLoggingInterceptor.Level.NONE
-       }
-       builder.addInterceptor(interceptor)
+  if(BuildConfig.DEBUG){
+  //显示日志
+  interceptor.level = HttpLoggingInterceptor.Level.BODY
+  else {
+  interceptor.level = HttpLoggingInterceptor.Level.NONE
+  }
+  builder.addInterceptor(interceptor)
 
-     retrofit = Retrofit.Builder().client(builder.build()).baseUrl(BASE_URL)
-          .addConverterFactory(ScalarsConverterFactory.create())
-        .addConverterFactory(GsonConverterFactory.create())
-       .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-       .build()
+  retrofit = Retrofit.Builder().client(builder.build()).baseUrl(BASE_URL)
+  .addConverterFactory(ScalarsConverterFactory.create())
+  .addConverterFactory(GsonConverterFactory.create())
+  .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+  .build()
  ```
 
 
