@@ -1,6 +1,6 @@
 package com.zlh.huahua.base.http
 
-import cn.ejiamall.extension.showShortToast
+import com.zlh.huahua.base.extension.showShortToast
 import com.zlh.huahua.base.util.ContextHolder
 import org.reactivestreams.Subscriber
 import org.reactivestreams.Subscription

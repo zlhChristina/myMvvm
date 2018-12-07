@@ -1,4 +1,4 @@
-package cn.ejiamall.extension
+package com.zlh.huahua.base.extension
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -92,7 +92,7 @@ fun Context.copy(str: String, isShowToast: Boolean) {
 fun Context.copy(str: String, text: String?) {
     val clip = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
     clip!!.primaryClip = ClipData.newPlainText(null, str) // 复制
-    if (text != null)
+    if (!text.isNullOrEmpty())
         showShortToast(text)
 }
 
